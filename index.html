@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first page
+    </title>
+</head>
+<body>
+   <br>
+   <!--- br tag is a break --->
+</body>
+<h1></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravin Advertising - Complete Designing & Printing Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffbb00 0%, #f56e00 100%);
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header img.logo {
+      width: 120px;
+      max-width: 100%;
+      margin-bottom: 10px;
+      background: white;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    header img.logo:hover {
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+      animation: textGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+      0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #a1a1a19d, 0 0 20px #d8d8d89d;
+      }
+      100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fcff36, 0 0 30px #ffae00;
+      }
+    }
+
+    header p {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      opacity: 0.9;
+    }
+
+    nav {
+      background: #1f1f1f;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #000000;
+      transform: translateY(-2px);
+    }
+
+    .banner {
+      width: 100%;
+      min-height: 700px;
+      background: url('/mnt/data/360_F_1189665751_jRFHJffWukDStcGxTbnPzDlWORPhDeGK.jpg') center center/cover no-repeat;
+      position: relative;
+    }
+
+    .billboard-container {
+      position: relative;
+      width: 100%;
+      height: 700px;
+    }
+
+    .billboard-container::after {
+      content: 'INDOOR & OUTDOOR ADVERTISING • INDOOR & OUTDOOR ADVERTISING •';
+      position: absolute;
+      top: 30px;
+      left: 0;
+      width: 100%;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #272727;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+      animation: floatText 15s linear infinite;
+      white-space: nowrap;
+      z-index: 10;
+      background: rgba(102, 102, 102, 0);
+      padding: 5px 0;
+      text-align: center;
+    }
+
+    @keyframes floatText {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .billboard {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .billboard-frame {
+      width: 600px;
+      height: 350px;
+      background: #fff;
+      border: 10px solid #bd921b;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: zoomIn 2s ease;
+      padding: 20px;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .billboard-content img.logo-frame {
+      width: 120px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .billboard-content img.logo-frame:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    }
+
+    .billboard-content h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, #ff0000, #fbff00);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 10px rgba(0,0,0,0.2);
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .billboard-content p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .intro {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      color: #d00000;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .locations {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #222;
+      background: #fff7af;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .contact {
+      padding: 60px 20px;
+      background: #f7f7f7;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.2rem;
+      color: #d00000;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .contact-item {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      min-width: 200px;
+    }
+
+    .contact-item h4 {
+      color: #d00000;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Pravin Advertising Logo" class="logo" />
+    <h1>Pravin Advertising</h1>
+    <p>The Complete Designing & Printing Solutions</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+  </nav>
+
+  <section class="banner" id="home">
+    <div class="billboard-container">
+      <div class="billboard">
+        <div class="billboard-frame">
+          <div class="billboard-content">
+            <img src="logo.png" alt="Pravin Logo" class="logo-frame" />
+            <h1>PRAVIN ADVERTISING</h1>
+            <p>Complete Designing & Printing Solutions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <h2>Delivering Creative Impact for Over 20 Years</h2>
+    <p>At Pravin Advertising, we turn your vision into vibrant reality. With decades of experience in indoor and outdoor advertising, we bring unmatched quality, creativity, and trust to every project.</p>
+    <div class="locations">
+      <strong>Areas We Proudly Serve:</strong><br>
+      Navi Mumbai, Wavarle, Khalapur, Khopoli, Karjat, Chaouk, Pune City, Talegoan Road, P.C.M.C, Pune Satara Road, Mulashi, Pune Nashik Road, Solapur Road, Daund, Mumbai Pune Expressway, Eastern Express Highway, Thane, Alibaug, Lonavala
+    </div>
+    <div class="contact-info" style="margin-top: 60px;">
+      <div class="contact-item">
+        <h4>Phone</h4>
+        <p>+91 9082264947</p>
+      </div>
+      <div class="contact-item">
+        <h4>Email</h4>
+        <p>bhaggyashreesalunke.20@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Pravin Advertising. All rights reserved. | Designed with excellence in mind.</p>
+  </footer>
+</body>
+</html>
+</Style>(max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .billboard-frame {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .billboard-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .billboard-content p {
+    font-size: 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
